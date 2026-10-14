@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int distance, i;
+
+    printf("Drone Detection System\n");
+    printf("---------------------\n");
+
+    for (i = 1; i <= 5; i++)
+    {
+        printf("\nEnter distance of object %d (in meters): ", i);
+        scanf("%d", &distance);
+
+        if (distance <= 50)
+        {
+            printf("Drone Detected!\n");
+            printf("Alert: Object is within detection range.\n");
+        }
+        else
+        {
+            printf("No Drone Detected.\n");
+            printf("Area is Clear.\n");
+        }
+    }
+
+    return 0;
+}
