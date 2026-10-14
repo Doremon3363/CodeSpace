@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void checkSpeed(int speed[], int n)
+{
+    int i;
+
+    for (i = 0; i < n; i++)
+    {
+        printf("Robot %d Speed: %d m/s - ", i + 1, speed[i]);
+
+        if (speed[i] > 5)
+            printf("Reduce Speed\n");
+        else
+            printf("Speed Safe\n");
+    }
+}
+
+int main()
+{
+    int speed[4] = {2, 6, 4, 8};
+
+    checkSpeed(speed, 4);
+
+    return 0;
+}
